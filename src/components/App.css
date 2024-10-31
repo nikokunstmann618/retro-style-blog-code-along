@@ -1,6 +1,9 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #FFB3BA, #FFDFBA);
+  color: #333;
+
 }
 
 .App {
@@ -14,14 +17,19 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  background-color: black;
-  color: white;
+  background-color: #EEE2DE;
+  /*background-color: black;
+  color: white;*/
+  color: #333;
   grid-column: 1 / span 2;
-  padding: 10px 5px;
+  padding: 15px 10px;
+  font-size: 1.2em;
+  box-shadow: 0px 3px, 6px rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid #FFDFBA;
 }
 
 form {
-  padding: 10px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -29,35 +37,83 @@ form {
 
 form input,
 form textarea {
-  margin-bottom: 10px;
-  width: 300px;
+  margin-bottom: 12px;
+  width: 280px;
+  padding: 8px;
+  border: 1px solid #D8A7B1;
+  color: #333;
 }
 
-nav,
-article {
-  height: 100%;
-  padding: 10px;
+form input:focus,
+form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 6px #FFB3BA;
 }
 
 nav {
-  background-color: #dee9ff;
+  background-image: linear-gradient(#7776B3, #9B86BD, #E2BBE9);
+  padding: 15px;
+  color: #FFF;
+  font-size: 1.1em;
+  border-right: 3px solid #FFDFBA;
+}
+
+nav p {
+  margin: 0 0 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+
 }
 
 nav p:hover {
+  color: #FFD1DC;
   text-decoration: underline;
-  cursor: pointer;
+}
+
+article {
+  height: 100%;
+  padding: 15px;
+  background-color: #FFF6F0;
+  color: #333;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+
 }
 
 article .date {
   font-style: italic;
+  color: #777;
 }
 
 article .body {
   white-space: break-spaces;
+  font-size: 1.1em;
+  line-height: 1.6;
+
 }
 
 .error {
-  background-color: red;
-  color: gold;
-  padding: 5px;
+  background-color: #FFB3BA;
+  color: #B00020;
+  padding: 10px;
+  border: 2px solid #FF0303;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #FFABAB;
+  color: #FFF;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Pacifico', cursive;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: #F48FB1;
+  transform: translateY(-2px);
 }
